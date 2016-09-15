@@ -10,3 +10,5 @@ How to use:
 
 1. Install with greasemonkey
 2. Use clicks when attacking. I commented out the hotkeys because I feel they're pretty buggy and I'm too lazy to debug them. 
+
+NOTE: This uses GM_setValue and GM_getValue, which I assume uses localStorage. I bet the values will reset if you clear cache or turn off the script.
