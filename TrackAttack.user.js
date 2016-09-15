@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         Attack Counter
 // @namespace    http://tampermonkey.net/
-// @version      0.1
-// @description  try to take over the world!
-// @author       You
+// @version      0.2
+// @description  It farms gold in initium while you sleep
+// @author       RevulvaOcelot
 // @match        *http://www.playinitium.com/*
 // @match        *https://www.playinitium.com/*
 
