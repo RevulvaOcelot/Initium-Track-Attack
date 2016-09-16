@@ -13,4 +13,4 @@ How to use:
 2. Weird shit. Hotkeys STILL work. I'm guessing Initium just triggers clicks when the shortcuts are pressed. Thank Hod I don't have to debug this.
 3. This uses GM_setValue and GM_getValue, which I assume uses localStorage. I bet the values will reset if you clear cache or turn off the script.
 
-NOTE: Now tracks based on character name!
+NOTE: Now tracks based on character name! 
