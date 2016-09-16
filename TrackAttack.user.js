@@ -15,7 +15,6 @@
 
 function setAttack(charName, attacks) {
     GM_setValue(charName+'Attacks', attacks);
-    alert(charName+'Attacks');
 }
 
 (function() {
