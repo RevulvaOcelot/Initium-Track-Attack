@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Attack Counter
 // @namespace    http://tampermonkey.net/
-// @version      0.2
+// @version      0.3
 // @description  It farms gold in initium while you sleep
 // @author       RevulvaOcelot
 // @match        *http://www.playinitium.com/*
@@ -13,17 +13,22 @@
 
 
 
+function setAttack(charName, attacks) {
+    GM_setValue(charName+'Attacks', attacks);
+    alert(charName+'Attacks');
+}
 
 (function() {
     'use strict';
-    var attacks = GM_getValue('attacks', 0);
-    // var loc = $('.header-location').children('a').text().match('Combat site'); // 
+    var charName = $('.hint').text();
+    var attacks = GM_getValue(charName+'Attacks', 0);
+
     var loc = document.title == "Combat - Initium";
     $('body').prepend('<div id="displayDiv" style="float: left;"><i id="attackDisplay"  style=""> Attacks: ' + attacks + ' </i>  <button id="resetAttacks"  style=""> Reset Counter </button></div>');
-    $('#resetAttacks').on('click', function(e) {e.preventDefault(); attacks = 0; GM_setValue('attacks', attacks); $('#attackDisplay').text('Attacks: '+ attacks);});
+    $('#resetAttacks').on('click', function(e) {e.preventDefault(); attacks = 0; setAttack(charName, attacks); $('#attackDisplay').text('Attacks: '+ attacks);});
     // If location is a combat site;
-    if(loc) { 
-        // //Hotkey: 2. Use this if you want, but it's pretty buggy. 
+    if(loc) {
+        // //Hotkey: 2. Use this if you want, but it's pretty buggy.
         // $(document).bind('keyup', function(e) {
         // if (e.keyCode == 50) {
         //     attacks += 1;
@@ -35,7 +40,7 @@
            e.preventDefault();
            if(($(this).attr('shortcut') == 49) || ($(this).attr('shortcut') == 50)) {
                 attacks += 1;
-                GM_setValue('attacks', attacks);
+                setAttack(charName, attacks);
            }
         });
     }
