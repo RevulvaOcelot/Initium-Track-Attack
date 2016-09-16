@@ -6,7 +6,7 @@
 // @author       https://github.com/RevulvaOcelot/
 // @match        *http://www.playinitium.com/*
 // @match        *https://www.playinitium.com/*
-
+ 
 // @grant        GM_setValue
 // @grant        GM_getValue
 // ==/UserScript==
