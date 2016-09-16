@@ -3,7 +3,7 @@
 // @namespace    http://tampermonkey.net/
 // @version      0.3
 // @description  It farms gold in initium while you sleep
-// @author       RevulvaOcelot
+// @author       https://github.com/RevulvaOcelot/
 // @match        *http://www.playinitium.com/*
 // @match        *https://www.playinitium.com/*
 
